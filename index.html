@@ -223,7 +223,7 @@
 
             try {
                 const userCredential = await signInWithEmailAndPassword(auth, email, password);
-                alert("Người dùng đã đăng nhập thành công!");
+                alert("Đăng nhập thành công!");
                 document.getElementById('loginModal').classList.add('hidden');
                 location.reload(); // Reload the page on successful login
             } catch (error) {
@@ -245,7 +245,7 @@
         document.getElementById('logoutButton').addEventListener('click', async function() {
             try {
                 await signOut(auth);
-                alert("Người dùng đã đăng xuất thành công!");
+                alert("Đăng xuất thành công!");
                 location.reload(); // Reload the page on logout
             } catch (error) {
                 console.error("Lỗi khi đăng xuất: ", error);
@@ -264,7 +264,7 @@
                 setTimeout(async () => {
                     try {
                         await signOut(auth);
-                        alert("Phiên đã hết hạn. Người dùng đã đăng xuất.");
+                        alert("Phiên đã hết hạn. Đang đăng xuất!");
                         location.reload();
                     } catch (error) {
                         console.error("Lỗi khi đăng xuất: ", error);
